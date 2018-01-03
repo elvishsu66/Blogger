@@ -1,0 +1,12 @@
+{
+	metaData:{
+		"idProperty":"id",
+		"totalProperty":"total",
+		"successProperty":"success",
+		"root":"row",
+		"fields":[{"name":"id","type":"int"},{"name":"name","type":"string"}]
+	},
+	"columns":[{"dataIndex":"id","header":"ID","width":10},{"dataIndex":"name","header":"Name","width":20}],
+	"total":1,"success":true,"message":"success",
+	"row":[{"id":1,"name":"eee"}]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Untitled Document</title>
+        <style>
+			#related_posts{
+				border-top: 1px solid #d0d0d0;
+				border-bottom: 1px solid #d0d0d0;        	
+			}
+
+			#related_posts h2 {
+			    background: #211f1c url(http://3.bp.blogspot.com/-oYZm1to9phA/UtuypLgFj3I/AAAAAAAAA5U/wFb55hEQ7SQ/s1600/texture-dark.jpg) fixed;
+			    display:block;
+			    height:35px;
+			    color:white;
+			    font-weight: normal;
+			    letter-spacing: -0.5px;
+			    font-size: 18px;
+			    padding-left:20px;
+			    line-height: 33px;
+			    font-family:"Trebuchet MS", Helvetica, sans-serif;
+			}
+
+			.related_items_wapper{
+				padding: 10px;
+				overflow:hidden;
+			}
+
+			.related_item{
+				float:left;
+				overflow: hidden;
+				width:200px;
+				height:230px;
+				text-align: center;
+				border-radius: 4px;
+				background:#fff;
+				margin: 5px 8px;
+				box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+			   -webkit-transition: all .5s ease;
+			     -moz-transition: all .5s ease;
+			       -o-transition: all .5s ease;
+			      -ms-transition: all .5s ease;
+			          transition: all .5s ease;
+			}
+
+			.related_item:hover{
+				box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.45);
+				background: #eee;
+				cursor: pointer;
+			}
+
+			.related_item:hover img, .related_item:hover .title{
+				opacity: .8;
+			}
+
+			.related_item img{
+				float: left;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				width:200px;
+				height:150px;
+			}
+
+			.related_item .title{
+				float: left;
+			    background: #555 url(http://3.bp.blogspot.com/-oYZm1to9phA/UtuypLgFj3I/AAAAAAAAA5U/wFb55hEQ7SQ/s1600/texture-dark.jpg) fixed;
+				font-size: 120%;
+				text-align: center;
+				padding:10px 5px;
+				height:100%;
+				width:100%;
+				max-width: 190px;
+				word-wrap:break-word;
+			}
+
+			.related_item .title a{
+				text-decoration: none;
+				color:#fff;
+			}
+        </style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+		<script src="related_posts.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			var config = {
+				url:'http://www.elvishsu66.com',
+				postId:'7852801877444023551',
+				labels:'Blogger,jQuery,Javascript',
+				title:'You may also like - ',
+				maxPosts: 3,
+				thumbWidth:200,
+				thumbHeight:150,
+			};
+			$('#related_posts').relatedPosts(config);
+		});
+        </script>
+    </head>
+    <body>
+		<div id="related_posts"></div>
+
+    </body>
+</html>

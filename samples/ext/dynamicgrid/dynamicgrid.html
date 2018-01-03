@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Dynamic Grid Example : Elvis is still in the building</title>
+    <!-- Ext includes -->
+    <link rel="stylesheet" type="text/css" href="https://docs.sencha.com/extjs/4.1.1/extjs-build/resources/css/ext-all.css" />
+    <script type="text/javascript" src="https://docs.sencha.com/extjs/4.1.1/extjs-build/ext-all.js"></script>
+    <script type="text/javascript" src="Ext.ux.grid.DynamicGridPanel.js"></script>
+    <script>
+		// Start loading the page        
+		Ext.onReady(function(){
+		    // we need to define the model but the field values will be parsed
+		    // automatically since we provided fields in the metaData from server
+		   Ext.define('dynamicModel', {
+		     extend: 'Ext.data.Model',
+		     //set the proxy
+		     proxy: {
+		       type: 'rest',
+		       url: 'dg.json' // the sample server address
+		     }
+		   });
+		   // create a data store
+		   var myStore = Ext.create('Ext.data.Store', {
+		         model:'dynamicModel',
+		         autoLoad:true,
+		   });    
+		   // create dynamic grid
+		   var myGrid = {
+		       title:'Dynamic Grid',
+		       xtype:'dynamicgrid',
+		       forceFit:true,
+		       region:'center',
+		       store:myStore,
+		       dockedItems: [{
+		         xtype: 'pagingtoolbar',
+		         store: myStore,
+		         dock: 'bottom',
+		         displayInfo: true
+		       }]              
+		   };   
+		    // finally, build the main layout once all the pieces are ready.
+		    Ext.create('Ext.container.Viewport', {
+		        layout:'border',
+		        items:[myGrid]
+		    });
+		});
+    </script
+</head>
+</html>
